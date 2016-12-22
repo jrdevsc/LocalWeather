@@ -1,0 +1,38 @@
+body{
+  background: url("img/deer.jpg") no-repeat center;
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
+  padding-top: 45px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.lower{
+  padding: 25px 0;
+}
+/*fonts */
+
+h1{
+  font-size: 100px;
+  color: #ccc;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, .7);
+}
+
+h2, h3, h4, p{
+  font-size: 2.5em;
+  color: #ccc;
+}
+
+/*well style*/
+
+.well{
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  border: none;
+}
+
+/*image*/
+img{
+  height: 150px;
+  width: 150px;
+}
