@@ -25,15 +25,22 @@ var myWeather = navigator.geolocation.getCurrentPosition(function(position){
 
       //append the DOM
       $('#city').append("<h3>"+city+"</h3>");
-      $('#currentConditions').append("<h3>"+currentConditions+"</h3>");
+      $('#currentConditions').append("<p>"+currentConditions+"</p>");
       $('#weatherIcon').append("<img src="+weatherIcon+" />")
-      $('#temp').append("<p>"+currentTemp+"</p>");
+      $('#temp').append("<p>"+currentTemp+" F</p>");
 
-      //radio button - click converts temp in f to temp in c...weirdos
-      $("input[type='radio']").click(function(){
-        //math.floor, because i hate decimals
-        currentTemp = Math.floor((currentTemp - 32)*5/9);
-        $('#temp').replaceWith("<h3>"+currentTemp+"</h3>");
+      //button click changes temp display
+
+      var ftemp = currentTemp;
+      var ctemp = Math.floor(((ftemp - 32)*5/9));
+      $("#chk").click(function(){
+        if($(this).text() == "Get Temp in F"){
+          $('#temp').text(ftemp +" F");
+          $(this).text("Get Temp in C");
+        }else{
+          $('#temp').text(ctemp+ " C");
+          $(this).text("Get Temp in F");
+        };
       });
     },
 

@@ -27,7 +27,7 @@ h2, h3, h4, p{
 
 .well{
   height: 100%;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, .3);
   border: none;
 }
 
