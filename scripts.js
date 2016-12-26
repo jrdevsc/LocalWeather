@@ -14,6 +14,7 @@ var myWeather = navigator.geolocation.getCurrentPosition(function(position){
       lat: lat,
       lon: lon
     },
+    dataType: "json",
     //on success, grab everything, let the magic begin!
     success: function(data){
 
