@@ -8,21 +8,22 @@ var myWeather = navigator.geolocation.getCurrentPosition(function(position){
 
   //make API call
   $.ajax({
-    url: "https://api.openweathermap.org/data/2.5/weather",
+    url: "http://api.openweathermap.org/data/2.5/weather",
     data: {
       appid: appid,
       lat: lat,
       lon: lon
     },
-    dataType: "json",
+    dataType: "jsonp",
+    jsonp: 'jsonp_callback',
     //on success, grab everything, let the magic begin!
     success: function(data){
-
+//addedforfunx
       //grab responses
       var city = data.name;
       var currentConditions = data.weather[0].description;
       var currentTemp = Math.floor((((data.main.temp)-273)*9/5)+32);
-      var weatherIcon = "https://openweathermap.org/img/w/"+data.weather[0].icon+".png";
+      var weatherIcon = "http://openweathermap.org/img/w/"+data.weather[0].icon+".png";
 
       //append the DOM
       $('#city').append("<h3>"+city+"</h3>");
