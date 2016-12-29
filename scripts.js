@@ -1,5 +1,5 @@
 //setup
-var appid = "463596c81d45982112016c6be4b400bb";
+var appid = "6445edbbe277fc18245051f69202a06c";
 
 //grab current location of user
 var myWeather = navigator.geolocation.getCurrentPosition(function(position){
