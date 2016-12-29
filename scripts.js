@@ -8,7 +8,7 @@ var myWeather = navigator.geolocation.getCurrentPosition(function(position){
 
   //make API call
   $.ajax({
-    url: "http://api.openweathermap.org/data/2.5/weather",
+    url: "api.openweathermap.org/data/2.5/weather",
     data: {
       appid: appid,
       lat: lat,
