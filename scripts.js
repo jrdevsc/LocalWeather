@@ -1,5 +1,6 @@
 //setup
 var appid = "6445edbbe277fc18245051f69202a06c";
+var url = "http://api.openweathermap.org/data/2.5/weather";
 
 //grab current location of user
 var myWeather = navigator.geolocation.getCurrentPosition(function(position){
@@ -7,8 +8,8 @@ var myWeather = navigator.geolocation.getCurrentPosition(function(position){
   var lon = Math.floor(position.coords.longitude);
 
   //make API call
-  $.ajax({
-    url: "api.openweathermap.org/data/2.5/weather",
+  $.getJSON({
+    url: url,
     data: {
       appid: appid,
       lat: lat,
